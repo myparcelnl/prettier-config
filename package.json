@@ -1,0 +1,22 @@
+{
+  "name": "@myparcel/prettier-config",
+  "version": "0.0.1",
+  "description": "Prettier configuration for MyParcel",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "es5.js",
+    "index.js",
+    "vue.js"
+  ],
+  "author": "edie@myparcel.nl",
+  "license": "ISC",
+  "devDependencies": {
+    "@myparcel/semantic-release-config": "^2.0.0"
+  },
+  "release": {
+    "extends": "@myparcel/semantic-release-config/github-npm"
+  }
+}

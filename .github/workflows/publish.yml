@@ -1,0 +1,22 @@
+name: 'Publish new release 🚀'
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - index.js
+      - package.json
+      - yarn.lock
+
+jobs:
+  process:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: myparcelnl/actions/yarn-install@v1
+      - name: 'Release'
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
