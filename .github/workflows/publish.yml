@@ -1,22 +1,40 @@
-name: 'Publish new release 🚀'
+name: Release
 
 on:
   push:
     branches:
       - main
-    paths:
-      - index.js
-      - package.json
-      - yarn.lock
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  process:
-    runs-on: ubuntu-20.04
+  release:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: myparcelnl/actions/yarn-install@v1
-      - name: 'Release'
-        run: npx semantic-release
+      - name: Setup Git credentials
+        id: credentials
+        uses: myparcelnl/actions/setup-git-credentials@v4
+        with:
+          app-id: ${{ secrets.MYPARCEL_APP_ID }}
+          private-key: ${{ secrets.MYPARCEL_APP_PRIVATE_KEY }}
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ steps.credentials.outputs.token }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.credentials.outputs.token }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN_NEW }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_NEW }}
+        run: npx semantic-release
