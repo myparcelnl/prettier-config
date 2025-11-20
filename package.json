@@ -16,7 +16,6 @@
   "devDependencies": {
     "@myparcel-dev/semantic-release-config": "^6.0.7"
   },
-  },
   "release": {
     "extends": "@myparcel-dev/semantic-release-config/github-npm"
   }
