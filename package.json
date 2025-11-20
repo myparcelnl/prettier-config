@@ -14,7 +14,7 @@
   "author": "edie@myparcel.nl",
   "license": "ISC",
   "devDependencies": {
-    "@myparcel-dev/semantic-release-config": "^6.0.0"
+    "@myparcel-dev/semantic-release-config": "^6.0.5"
   },
   "release": {
     "extends": "@myparcel-dev/semantic-release-config/github-npm"
