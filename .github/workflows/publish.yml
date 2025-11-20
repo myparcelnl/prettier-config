@@ -32,6 +32,9 @@ jobs:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org'
 
+      - name: Install dependencies
+        run: npm install --save-dev @myparcel-dev/semantic-release-config@6.0.5 semantic-release
+
       - name: Release
         env:
           GITHUB_TOKEN: ${{ steps.credentials.outputs.token }}
