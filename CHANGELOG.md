@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/myparcelnl/prettier-config/compare/v2.0.0...v2.0.1) (2026-02-19)
+
+
+### :bug: Bug Fixes
+
+* **ci:** use NPM_TOKEN secret name ([076dad3](https://github.com/myparcelnl/prettier-config/commit/076dad334b391cc20a1e28d29d7be7f0e553e966))
+
 ## [2.0.0](https://github.com/myparcelnl/prettier-config/compare/v1.1.0...v2.0.0) (2025-11-20)
 
 
