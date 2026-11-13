@@ -36,7 +36,5 @@ jobs:
 
       - name: Release
         uses: myparcelnl/actions/semantic-release@v6
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         with:
           token: ${{ steps.credentials.outputs.token }}
