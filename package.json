@@ -14,7 +14,7 @@
   "author": "edie@myparcel.nl",
   "license": "ISC",
   "devDependencies": {
-    "@myparcel-dev/semantic-release-config": "^7.0.3",
+    "@myparcel-dev/semantic-release-config": "^8.1.0",
     "semantic-release": "^25.0.9"
   },
   "release": {
