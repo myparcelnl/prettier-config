@@ -12,6 +12,9 @@ concurrency:
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write # npm trusted publishing (OIDC) exchanges this token for a short-lived npm token
+      contents: read
     steps:
       - name: Setup Git credentials
         id: credentials
@@ -33,7 +36,5 @@ jobs:
 
       - name: Release
         uses: myparcelnl/actions/semantic-release@v6
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         with:
           token: ${{ steps.credentials.outputs.token }}
