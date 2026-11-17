@@ -19,7 +19,7 @@
   "license": "ISC",
   "devDependencies": {
     "@myparcel-dev/semantic-release-config": "^8.1.0",
-    "semantic-release": "^25.0.9"
+    "semantic-release": "^26.0.1"
   },
   "release": {
     "extends": "@myparcel-dev/semantic-release-config/github-npm"
