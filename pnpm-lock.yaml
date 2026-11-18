@@ -172,7 +172,7 @@ importers:
     devDependencies:
       '@myparcel-dev/semantic-release-config':
         specifier: ^8.1.0
-        version: 8.1.0(@visulima/yaml@1.0.0)(json5@2.2.3)(supports-color@7.2.0)
+        version: 8.1.1(@visulima/yaml@1.0.0)(json5@2.2.3)(supports-color@7.2.0)
       node:
         specifier: runtime:^24.21
         version: runtime:24.22.2
@@ -224,9 +224,9 @@ packages:
   '@iwavesmedia/semantic-release-composer@1.1.0':
     resolution: {integrity: sha512-qhvrNEHgvMEz6nF3C1jkaJkGlztU1wiQdI/BDYiDIq5N++ypy1tAPUT+a6iezqtNErWOoDU1Oi4lK3DklxfGGA==}
 
-  '@myparcel-dev/semantic-release-config@8.1.0':
-    resolution: {integrity: sha512-ZS7dtyH27NjfGiQF5Q7ZLgrRy/n00n9PUXAdwuAF6NNRyecdCBCJDVj4PBN/iuYauJvYzl4sVE7rkGZng+F3qA==}
-    engines: {node: ^24.21}
+  '@myparcel-dev/semantic-release-config@8.1.1':
+    resolution: {integrity: sha512-T0HXlvlwpOaDaGNY7A7EyUVUe2eL0HZu8ALBxsbjAV2e8HuHmCIEyR17zUh5St+saOWJ20nHoyC5fnOvBrdDTQ==}
+    engines: {node: '>=24.21'}
 
   '@octokit/auth-token@6.0.0':
     resolution: {integrity: sha512-P4YJBPdPSpWTQ1NU4XYdvHvXJJDxM6YwpS0FZHRgP7YFkdVxsWcpWGy/NVqlAA7PcPCnMacXlRm1y2PFZRWL/w==}
@@ -1835,7 +1835,7 @@ snapshots:
     dependencies:
       '@semantic-release/error': 2.2.0
 
-  '@myparcel-dev/semantic-release-config@8.1.0(@visulima/yaml@1.0.0)(json5@2.2.3)(supports-color@7.2.0)':
+  '@myparcel-dev/semantic-release-config@8.1.1(@visulima/yaml@1.0.0)(json5@2.2.3)(supports-color@7.2.0)':
     dependencies:
       '@anolilab/semantic-release-pnpm': 8.1.37(@visulima/yaml@1.0.0)(json5@2.2.3)(supports-color@7.2.0)
       '@iwavesmedia/semantic-release-composer': 1.1.0
